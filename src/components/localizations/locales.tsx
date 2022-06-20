@@ -15,7 +15,7 @@ type langType = {
 
 export default function Locales() {
   const { locales, locale, push, pathname, asPath, query } = useRouter()
-  const [currLang, currLangSet] = useState<string | null>(locale)
+  const [currLang, currLangSet] = useState<string | null>(locale || null)
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
   const open = Boolean(anchorEl)
   const handleClick = (event: MouseEvent<HTMLElement>) => {

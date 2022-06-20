@@ -52,6 +52,7 @@ export default function Header() {
             </IconButton>
 
             <HeaderNotificaiton />
+
             <Locales />
           </Box>
         </Toolbar>

@@ -1,0 +1,7 @@
+{
+  "about": {
+    "title": "About",
+    "description": "This example was updated {lastUpdatedRelative} ({lastUpdated, date, short})."
+  },
+  "title": "About"
+}

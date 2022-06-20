@@ -11,8 +11,15 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>,
 ) {
-  const selected = req.headers['accept-language'] || 'en'
+  /*const selected = req.headers['accept-language'] || 'en'
   const cnData = path.join(process.cwd(), `/locales/${selected}.json`)
+  const jsonCNData = await fsPromises.readFile(cnData)
+  const objectData = JSON.parse(jsonCNData.toString())*/
+
+  const cnData = path.join(
+    process.cwd(),
+    `/locales/${req.query?.lng || 'en'}/${req.query?.ns || 'en'}.json`,
+  )
   const jsonCNData = await fsPromises.readFile(cnData)
   const objectData = JSON.parse(jsonCNData.toString())
 
