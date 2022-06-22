@@ -20,7 +20,7 @@ module.exports = {
     ],
     backends: typeof window !== 'undefined' ? [HttpBackend] : [],
   },
-  debug: true,
+  debug: false,
   load: 'languageOnly',
   localePath: path.resolve('./locales'),
   use: typeof window !== 'undefined' ? [ChainedBackend] : [],

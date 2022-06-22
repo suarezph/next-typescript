@@ -5,7 +5,6 @@ import { motion } from 'framer-motion'
 
 // !!Theme UI
 import { ThemeProvider } from '@mui/material/styles'
-import CssBaseline from '@mui/material/CssBaseline'
 import createEmotionCache from '../lib/createEmotionCache'
 import { CacheProvider, EmotionCache } from '@emotion/react'
 import theme from '@/assets/styles/theme'
@@ -35,8 +34,6 @@ function App(props: MyAppProps) {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <ThemeProvider theme={theme('dark')}>
-        {/* CSSBaseline kickstart for CSS */}
-        <CssBaseline />
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: mounted ? 1 : 0 }}
